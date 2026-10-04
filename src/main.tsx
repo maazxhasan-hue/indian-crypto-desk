@@ -60,7 +60,15 @@ function AdminRoute() {
 function Root() {
   const path = window.location.pathname;
 
-  if (path === "/admin" || path.startsWith("/admin/")) {
+  // Remove the GitHub Pages / Vite base path
+  // so both /admin and /indian-crypto-desk/admin work.
+  const normalizedPath =
+    path.replace(/^\/indian-crypto-desk/, "") || "/";
+
+  if (
+    normalizedPath === "/admin" ||
+    normalizedPath.startsWith("/admin/")
+  ) {
     return <AdminRoute />;
   }
 
