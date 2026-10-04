@@ -1,0 +1,581 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #050b17;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+.website {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(18, 63, 125, 0.18),
+      transparent 35%
+    ),
+    #050b17;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.topbar {
+  width: 100%;
+  min-height: 96px;
+  padding: 20px 48px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    #214f89,
+    #173d70
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 29px;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.brand-logo,
+.brand-placeholder {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+}
+
+.brand-logo {
+  object-fit: contain;
+  background: #ffffff;
+  padding: 4px;
+}
+
+.brand-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #f7931a;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 95px 25px 65px;
+  text-align: center;
+}
+
+.hero-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+
+.hero-logo,
+.hero-placeholder {
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+}
+
+.hero-logo {
+  object-fit: contain;
+  background: #ffffff;
+  padding: 15px;
+  border: 8px solid #203a64;
+  box-shadow:
+    0 0 0 10px rgba(31, 62, 105, 0.35),
+    0 20px 70px rgba(0, 89, 255, 0.15);
+}
+
+.hero-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #12467f;
+  border: 8px solid #203a64;
+  box-shadow:
+    0 0 0 10px rgba(31, 62, 105, 0.35),
+    0 20px 70px rgba(0, 89, 255, 0.15);
+}
+
+.hero-placeholder span {
+  color: #f7931a;
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.hero-placeholder strong {
+  color: #f7931a;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.hero-placeholder small {
+  color: #12467f;
+  font-size: 22px;
+  font-weight: 800;
+  margin-top: 7px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(52px, 7vw, 88px);
+  line-height: 1.05;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -3px;
+}
+
+.hero-text {
+  max-width: 780px;
+  margin: 35px auto 42px;
+  color: #c8d0dc;
+  font-size: clamp(21px, 3vw, 30px);
+  line-height: 1.45;
+}
+
+/* =========================
+   TELEGRAM BUTTON
+========================= */
+
+.telegram-button {
+  width: min(620px, 100%);
+  min-height: 78px;
+  border: none;
+  border-radius: 45px;
+  background: linear-gradient(
+    180deg,
+    #0878ff,
+    #0066ed
+  );
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow:
+    0 12px 35px rgba(0, 104, 255, 0.35);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.telegram-button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 16px 45px rgba(0, 104, 255, 0.5);
+}
+
+.telegram-button:active {
+  transform: translateY(1px);
+}
+
+.telegram-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-right: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #0878ff;
+  font-size: 18px;
+}
+
+.small-note {
+  margin: 22px 0 0;
+  color: #98a7bc;
+  font-size: 18px;
+}
+
+.marketing-note {
+  max-width: 650px;
+  margin: 22px auto 0;
+  color: #68758a;
+  font-size: 16px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+  width: min(920px, calc(100% - 50px));
+  margin: 20px auto 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: rgba(20, 26, 40, 0.9);
+  border: 1px solid #293246;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.stat {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  text-align: center;
+}
+
+.stat + .stat {
+  border-left: 1px solid #293246;
+}
+
+.stat strong {
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.stat span {
+  margin-top: 8px;
+  color: #a9b4c5;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.features-section {
+  width: min(920px, calc(100% - 50px));
+  margin: 0 auto;
+}
+
+.features-section h2 {
+  margin: 0 0 38px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 28px;
+  border-radius: 20px;
+  background: #151b29;
+  border: 1px solid #293246;
+}
+
+.check {
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(0, 211, 155, 0.14);
+  color: #00d39b;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.feature-content h3 {
+  margin: 0 0 8px;
+  font-size: 25px;
+}
+
+.feature-content p {
+  margin: 0;
+  color: #aeb8c8;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+/* =========================
+   BOTTOM CTA
+========================= */
+
+.bottom-cta {
+  width: min(920px, calc(100% - 50px));
+  margin: 70px auto;
+  text-align: center;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  margin-top: 90px;
+  padding: 70px 25px 45px;
+  text-align: center;
+  border-top: 1px solid #20293a;
+  background: #050a14;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 38px;
+  font-size: 25px;
+  font-style: italic;
+}
+
+.footer-logo,
+.footer-placeholder {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.footer-logo {
+  object-fit: contain;
+  background: #ffffff;
+  padding: 4px;
+}
+
+.footer-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #f7931a;
+  font-size: 27px;
+  font-weight: 900;
+}
+
+.footer > p {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  color: #c2cad6;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.footer .disclaimer {
+  color: #707c90;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.footer-line {
+  width: min(900px, 100%);
+  height: 1px;
+  margin: 42px auto 30px;
+  background: #20293a;
+}
+
+.managed {
+  color: #aab4c4;
+  font-size: 17px;
+}
+
+.managed span {
+  color: #ffffff;
+  margin-right: 8px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .topbar {
+    min-height: 76px;
+    padding: 14px 20px;
+  }
+
+  .brand {
+    gap: 12px;
+    font-size: 21px;
+  }
+
+  .brand-logo,
+  .brand-placeholder {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand-placeholder {
+    font-size: 24px;
+  }
+
+  .hero {
+    padding: 70px 20px 45px;
+  }
+
+  .hero-logo,
+  .hero-placeholder {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-logo-wrapper {
+    margin-bottom: 35px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+    letter-spacing: -2px;
+  }
+
+  .hero-text {
+    margin: 25px auto 30px;
+    font-size: 21px;
+  }
+
+  .telegram-button {
+    min-height: 68px;
+    font-size: 20px;
+  }
+
+  .small-note {
+    font-size: 16px;
+  }
+
+  .marketing-note {
+    font-size: 14px;
+  }
+
+  .stats {
+    width: calc(100% - 35px);
+    margin-bottom: 60px;
+  }
+
+  .stat {
+    min-height: 115px;
+    padding: 15px 8px;
+  }
+
+  .stat strong {
+    font-size: 25px;
+  }
+
+  .stat span {
+    font-size: 12px;
+  }
+
+  .features-section {
+    width: calc(100% - 35px);
+  }
+
+  .features-section h2 {
+    font-size: 31px;
+    margin-bottom: 25px;
+  }
+
+  .feature-card {
+    gap: 15px;
+    padding: 22px 18px;
+  }
+
+  .check {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .feature-content h3 {
+    font-size: 20px;
+  }
+
+  .feature-content p {
+    font-size: 16px;
+  }
+
+  .bottom-cta {
+    width: calc(100% - 35px);
+    margin: 55px auto;
+  }
+
+  .footer {
+    padding: 55px 20px 35px;
+  }
+
+  .footer > p {
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 420px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-logo,
+  .hero-placeholder {
+    width: 175px;
+    height: 175px;
+  }
+
+  .hero-placeholder span {
+    font-size: 35px;
+  }
+
+  .hero-placeholder strong {
+    font-size: 27px;
+  }
+
+  .hero-placeholder small {
+    font-size: 17px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat + .stat {
+    border-left: none;
+    border-top: 1px solid #293246;
+  }
+
+  .stat {
+    min-height: 100px;
+  }
+
+  .telegram-button {
+    font-size: 18px;
+  }
+}
